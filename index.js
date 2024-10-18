@@ -44,3 +44,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('nav ul li a[href= "#home"]').classList.add("active");
   });
 });
+
+(function() {
+
+  emailjs.init("fn6je89uZ7mqlLU5S");
+})();
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm('service_s2hj2cj', 'template_vmc75oh', this)
+    .then(function() {
+      const alertBox = document.getElementById('alertBox');
+      document.getElementById('contactForm').reset();
+      alertBox.style.display = 'block';
+      setTimeout(function() {
+        alertBox.style.display = 'none';
+      }, 2500);
+    }, function(error) {
+      alert('Failed to send the message. Error: ' + JSON.stringify(error));
+    });
+
+});

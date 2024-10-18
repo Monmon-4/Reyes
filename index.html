@@ -7,11 +7,14 @@
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"/>
-      <script src="https://kit.fontawesome.com/b30bf091ef.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/b30bf091ef.js" crossorigin="anonymous"></script><script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
   </head>
   <body>
+    <div id="alertBox" class="alert">
+      <p>Message sent successfully!</p>
+    </div>
     <nav>
       <div class="nav__content">
         <div class="logo"><a href="#home">Mon Christian</a></div>
@@ -116,9 +119,86 @@
       </div>
     </section>
 
-    <section id="contacts">
-      <img src="assets/digimon.png" alt="">
+    <section id="projects" class="projects">
+      <div class="projectsContainer">
+        <h1 class="projectsTitle">
+          My <span>Projects</span>
+        </h1>
+        <div class="projectsContent">
+          <div class="projectBox">
+            <div class="projectCard">
+              <div class="projectInfo">
+                <h4>Project 1</h4>
+                <p class="projectDescription">
+                  A brief description of what this project will be about. Stay tuned for updates!
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="projectBox">
+            <div class="projectCard">
+              <div class="projectInfo">
+                <h4>Project 2</h4>
+                <p class="projectDescription">
+                  Another exciting project in progress. More details to come soon!
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="projectBox">
+            <div class="projectCard">
+              <div class="projectInfo">
+                <h4>Project 3</h4>
+                <p class="projectDescription">
+                  This project will showcase my work in web development. Stay connected for updates!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+<section id="contacts" class="contacts">
+  <div class="contactContainer">
+    <div class="contactInfo">
+      <h1 class="contactTitle">Get in <span>Touch</span></h1>
+      <p class="contactDescription">
+        Have any questions or want to work together? Feel free to reach out! I’ll respond as soon as I can.
+      </p>
+      <div class="contactDetails">
+        <p><i class="ri-map-pin-line"></i> 1234 Street Name, City, Country</p>
+        <p><i class="ri-mail-line"></i> iancordovareyes@gmail.com</p>
+        <p><i class="ri-phone-line"></i> +123 456 7890</p>
+        <div class="otherContacts">
+
+          <a href="https://www.facebook.com/profile.php?id=100008620740594" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        
+        <a href="https://github.com/Monmon-4" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        
+        <a href="mailto:iancordovareyes@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-google"></i>
+        </a>
+        </div>
+      </div>
+    </div>
+    <div class="contactForm">
+      <form id="contactForm" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="sendBtn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
 <script src="index.js"></script>
   </body>
